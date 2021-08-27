@@ -25,3 +25,4 @@ goto start
 
 :pull
     echo ============================= pulling ==============================
+    call git pull
