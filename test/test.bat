@@ -4,8 +4,6 @@ set /a step=0
 goto start
 
 :start
-    set /p commit_content="What you want to commit : "
-    echo git commit -m "%commit_content%"
     echo 1. OWSF(mine)
     echo 2. OWSF_Platform(chris)
     echo 3. Batch
@@ -24,11 +22,10 @@ goto start
     )
 
 :checkStatus1
-    echo.
-    echo %cd%
+    @REM echo.
+    @REM echo %cd%
+    echo ============================= Check Status ==============================
     call git status
-    echo Continue add...
-    echo.
     goto :add
 
     @REM set /p click="IF YOU WANT TO STOP THIS PROCESS, PLEASE ENTER 'exit' "
@@ -64,25 +61,26 @@ goto start
     @REM         goto :exit
     @REM     )
     @REM )
-
-:checkStatus2
-    echo.
-    call git status
-    echo Continue commit...
-    goto :commit
     
 :add
-    echo.
+    echo ============================= Continue add ============================
     call git add .
     set /a step=1
     goto :checkStatus2
 
+:checkStatus2
+    echo.
+    call git status
+    echo ============================ Continue commit ============================
+    goto :commit
+
 :commit
     echo.
     set /p commit_content="What you want to commit : "
-    echo git commit -m "%commit_content%"
+    echo ~~~~~~~~~~~~~~~~~~~~ git commit -m "%commit_content%" ~~~~~~~~~~~~~~~~~~~~
     call git commit -m "%commit_content%"
     set /a step=2
 
 :push
+    echo ============================= Continue push =============================
     call git push
