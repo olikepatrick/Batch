@@ -4,21 +4,30 @@ set /a step=0
 goto start
 
 :start
+    echo 1. asus
+    echo 2. msi
+    echo 3. ubuntu
+    set /p system="which computer you on : "
+    
+    echo. 
     echo 1. OWSF(mine)
     echo 2. OWSF_Platform(chris)
     echo 3. Batch
-    set /p choosen="which you want to git push :"
-    if %choosen% == 1 (
-        cd C:\Users\nina1\Desktop\onward\github\OWSF
-        goto :checkStatus1
-    ) else if %choosen% == 2 (
-        cd C:\Users\nina1\Desktop\onward\github\OWSF_Platform
-        goto :checkStatus1
-    ) else if %choosen% == 3 (
-        cd C:\Users\nina1\Desktop\Batch
-        goto :checkStatus1
-    ) else (
-        goto start
+    set /p choosen="which you want to git push : "
+
+    if %system% == 1 (
+            if %choosen% == 1 (
+            cd C:\Users\Nina\Desktop\onward\github\OWSF_Beta_V1
+            goto :checkStatus1
+        ) else if %choosen% == 2 (
+            cd C:\Users\Nina\Desktop\onward\github\OWSF_Platform
+            goto :checkStatus1
+        ) else if %choosen% == 3 (
+            cd C:\Users\Nina\Desktop\Batch
+            goto :checkStatus1
+        ) else (
+            goto start
+        )
     )
 
 :checkStatus1
@@ -85,3 +94,4 @@ goto start
 
 :push
     call git push
+    cd C:\Users\Nina\Desktop

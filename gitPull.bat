@@ -11,13 +11,13 @@ goto start
     set /p choosen="which you want to update from github :"
 
     if %choosen% == 1 (
-        cd C:\Users\nina1\Desktop\onward\github\OWSF
+        cd C:\Users\Nina\Desktop\onward\github\OWSF
         goto :pull
     ) else if %choosen% == 2 (
-        cd C:\Users\nina1\Desktop\onward\github\OWSF_Platform
+        cd C:\Users\Nina\Desktop\onward\github\OWSF_Platform
         goto :pull
     ) else if %choosen% == 3 (
-        cd C:\Users\nina1\Desktop\Batch
+        cd C:\Users\Nina\Desktop\Batch
         goto :pull
     ) else (
         goto start
