@@ -6,13 +6,13 @@ goto start
 :start
     echo 1. asus
     echo 2. msi
-    echo 3. ubuntu
     set /p system="which computer you on : "
     
     echo. 
     echo 1. OWSF(mine)
     echo 2. OWSF_Platform(chris)
     echo 3. Batch
+    echo 4. MedalLife
     set /p choosen="which you want to git push : "
 
     if %system% == 1 (
@@ -25,6 +25,9 @@ goto start
         ) else if %choosen% == 3 (
             cd C:\Users\Nina\Desktop\Batch
             goto :checkStatus1
+        ) else if %choosen% == 4 (
+        cd C:\Users\Nina\Desktop\MedalLife-Frontend
+        goto :pull
         ) else (
             goto start
         )

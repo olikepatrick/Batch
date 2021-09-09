@@ -1,8 +1,8 @@
 @ECHO off
 
 
-set tmp=3333
-echo %tmp%
+@REM set tmp=3333
+@REM echo %tmp%
 
 goto start
 
@@ -33,3 +33,4 @@ title OWSF
 @REM start .\venv\Scripts\activate.bat
 @REM start python manage.py runserver %url%:%port%
 
+cd C:\Users\Nina\Desktop

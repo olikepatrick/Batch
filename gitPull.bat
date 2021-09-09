@@ -8,6 +8,7 @@ goto start
     echo 1. OWSF(mine)
     echo 2. OWSF_Platform(chris)
     echo 3. Batch
+    echo 4. MedalLife
     set /p choosen="which you want to update from github :"
 
     if %choosen% == 1 (
@@ -19,6 +20,9 @@ goto start
     ) else if %choosen% == 3 (
         cd C:\Users\Nina\Desktop\Batch
         goto :pull
+    ) else if %choosen% == 4 (
+        cd C:\Users\Nina\Desktop\MedalLife-Frontend
+        goto :pull
     ) else (
         goto start
     )
@@ -26,3 +30,4 @@ goto start
 :pull
     echo ============================= pulling ==============================
     call git pull
+    cd C:\Users\Nina\Desktop
