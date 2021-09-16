@@ -26,9 +26,9 @@ goto start
             cd C:\Users\Nina\Desktop\Batch
             goto :checkStatus1
         ) else if %choosen% == 4 (
-        cd C:\Users\Nina\Desktop\MedalLife-Frontend
-        goto :pull
-        ) else (
+            cd C:\Users\Nina\Desktop\MedalLife-Frontend
+            goto :checkStatus1
+        )  else (
             goto start
         )
     )
