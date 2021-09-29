@@ -12,7 +12,7 @@ goto start
     set /p choosen="Open Platform with which file :"
 
     if %choosen% == 1 (
-        cd C:\Users\Nina\Desktop\onward\github\OWSF_Beta_V1
+        cd C:\Users\Nina\Desktop\onward\github\OWSF\OWSF_Beta_V1
     ) else if %choosen% == 2 (
         cd C:\Users\Nina\Desktop\onward\github\OWSF_Platform
     ) else (
